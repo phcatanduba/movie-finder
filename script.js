@@ -50,7 +50,7 @@ function buy(movie) {
 
     const enviar = axios.post(`https://mock-api.bootcamp.respondeai.com.br/api/v2/moviefinder/filmes/${movieId}/ingresso`, movieData);
     enviar.then(sucess);
-    enviar.caught(fail);
+    enviar.catch(fail);
 
 }
 
