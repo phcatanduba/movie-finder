@@ -59,5 +59,5 @@ function sucess() {
 }
 
 function fail() {
-    alert("FALHA NA COMPRA TENTE NOVAMENTE!!");
+    alert("Os ingressos para este filme estão esgotados!");
 }
