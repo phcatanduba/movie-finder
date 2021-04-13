@@ -35,7 +35,7 @@ function activeButtons() {
 
 function buy(movie) {
     const name = prompt("Qual eh o seu nome?");
-    const placesToSit = prompt("Quantos lugares?");
+    const placesToSit = parseInt(prompt("Quantos lugares?"));
     const titleMovie = movie.querySelector(".title").innerHTML;
     const movieClicked = moviesData.filter(movie => {
        return movie.titulo === titleMovie;
@@ -45,9 +45,9 @@ function buy(movie) {
     console.log(movieId);
     movieData = {
         nome: name,
-        quantiade: placesToSit,
+        quantidade: placesToSit,
     }
-
+    console.log(movieData);
     const enviar = axios.post(`https://mock-api.bootcamp.respondeai.com.br/api/v2/moviefinder/filmes/${movieId}/ingresso`, movieData);
     enviar.then(sucess);
     enviar.catch(fail);
